@@ -11,7 +11,7 @@ jobs:
       - name: Get Contrast SARIF
         uses: Contrast-Security-OSS/contrast-sca-action@v2
         with:
-          apiKey: ${{ secrets.CONTRAST_API_KEY }}
+          apiKey: ${{ secrets.CONTRAST__API__API_KEY }}
           apiUrl: https://apptwo.contrastsecurity.com
           applicationId: f64dec93-ce8b-412d-9c6b-c140db2f9ad1
           authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
