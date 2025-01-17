@@ -13,7 +13,7 @@ jobs:
         with:
           apiKey: ${{ secrets.CONTRAST__API__API_KEY }}
           apiUrl: https://apptwo.contrastsecurity.com
-          applicationId: f64dec93-ce8b-412d-9c6b-c140db2f9ad1
+          applicationId: 56058ef3-ebc6-4691-948d-ddca1124332d #app sessions
           authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
           command: sarif
           #ghasEnabled: false
