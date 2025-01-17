@@ -1,0 +1,21 @@
+name: Contrast Security Sarif
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  Check-Dependency-Vulnerabilities:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Get Contrast SARIF
+        uses: Contrast-Security-OSS/contrast-sca-action@v2
+        with:
+          apiKey: ${{ secrets.CONTRAST_API_KEY }}
+          apiUrl: https://apptwo.contrastsecurity.com
+          applicationId: f64dec93-ce8b-412d-9c6b-c140db2f9ad1
+          authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
+          command: sarif
+          #ghasEnabled: false
+          #metadata: sessionMetadataKey1=value,key2=value...
+          orgId: e06e9701-bf90-49bb-af4c-39f28c4e7cb2
