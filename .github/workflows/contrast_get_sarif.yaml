@@ -17,5 +17,5 @@ jobs:
           authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
           command: sarif
           #ghasEnabled: false
-          #metadata: sessionMetadataKey1=value,key2=value...
+          metadata: buildNumber=258
           orgId: e06e9701-bf90-49bb-af4c-39f28c4e7cb2
