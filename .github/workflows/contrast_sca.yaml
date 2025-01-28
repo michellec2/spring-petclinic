@@ -1,0 +1,16 @@
+name: analyze_dependencies
+on:
+  push:
+    branches:
+      - "main"
+      
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+      - name: Run Contrast SCA Audit
+        uses: 'Contrast-Security-OSS/contrast-sca-action@v2'
+        with:
+          apiKey: ${{ secrets.CONTRAST_GITHUB_APP_API_KEY }}
+          authHeader: ${{ secrets.CONTRAST_GITHUB_APP_AUTH_HEADER }}
+          orgId: ${{ vars.CONTRAST_GITHUB_APP_ORG_ID }}
+          apiUrl: ${{ vars.CONTRAST_GITHUB_APP_TS_URL }}
