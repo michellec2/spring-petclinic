@@ -19,10 +19,8 @@ jobs:
       - name: Run Contrast SCA Audit
         uses: 'Contrast-Security-OSS/contrast-sca-action@v2'
         with:
-          apiKey: ${{ secrets.CONTRAST_GITHUB_APP_API_KEY }}
-          authHeader: ${{ secrets.CONTRAST_GITHUB_APP_AUTH_HEADER }}
-          orgId: ${{ vars.CONTRAST_GITHUB_APP_ORG_ID }}
-          apiUrl: ${{ vars.CONTRAST_GITHUB_APP_TS_URL }}
-          filePath: ${{ matrix.manifest.filePath }}
-          repositoryId: ${{ matrix.manifest.repositoryId }}
-          projectGroupId: ${{ matrix.manifest.projectGroupId }}
+          apiKey: ${{ secrets.CONTRAST__API__API_KEY }}
+          authHeader: ${{ secrets.CONTRAST_AUTH_HEADER }}
+          orgId: ${{ secrets.CONTRAST__API__ORGANIZATION }}
+          apiUrl: https://apptwo.contrastsecurity.com
+          projectGroupId: 51fe70b4-4b5c-4a7a-b858-8ade511bba57
